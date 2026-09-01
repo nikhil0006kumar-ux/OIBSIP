@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure Access protected dashboard">
+    <title>Dashboard | Secure Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+    <div class="background">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
+
+    <main class="dashboard-page">
+        <nav class="dashboard-nav">
+            <a href="dashboard.html" class="brand">
+                <div class="brand-mark">SA</div>
+                <span>Secure Access</span>
+            </a>
+
+            <button type="button" id="logoutButton" class="logout-button">
+                <span>Logout</span>
+                <span>↗</span>
+            </button>
+        </nav>
+
+        <section class="dashboard-content">
+            <div class="dashboard-heading">
+                <div>
+                    <span class="eyebrow">PROTECTED AREA</span>
+                    <h1>Welcome back, <span id="dashboardUsername">User</span></h1>
+                    <p>Your authenticated session is currently active.</p>
+                </div>
+
+                <div class="auth-badge">
+                    <span class="status-dot"></span>
+                    Authentication Active
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <article class="dashboard-card profile-card">
+                    <div class="card-top">
+                        <div class="card-icon">◎</div>
+                        <span class="card-label">ACCOUNT</span>
+                    </div>
+
+                    <div class="profile-avatar" id="profileAvatar">U</div>
+
+                    <h2 id="profileUsername">User</h2>
+                    <p id="profileEmail">user@example.com</p>
+
+                    <div class="account-status">
+                        <span class="status-dot"></span>
+                        Account Active
+                    </div>
+                </article>
+
+                <article class="dashboard-card">
+                    <div class="card-top">
+                        <div class="card-icon">✓</div>
+                        <span class="card-label">SECURITY</span>
+                    </div>
+
+                    <h2>Authenticated</h2>
+                    <p>Your account is currently active and authenticated in this browser.</p>
+
+                    <div class="info-row">
+                        <span>Account status</span>
+                        <strong>Active</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Access level</span>
+                        <strong>Protected</strong>
+                    </div>
+                </article>
+
+                <article class="dashboard-card">
+                    <div class="card-top">
+                        <div class="card-icon">◷</div>
+                        <span class="card-label">SESSION</span>
+                    </div>
+
+                    <h2>Current Session</h2>
+                    <p>This browser currently has an authenticated session.</p>
+
+                    <div class="session-status">
+                        <span class="status-pulse"></span>
+                        <div>
+                            <strong>Session Active</strong>
+                            <small>Authentication state verified</small>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dashboard-card dashboard-wide">
+                    <div class="card-top">
+                        <div class="card-icon">◆</div>
+                        <span class="card-label">SYSTEM</span>
+                    </div>
+
+                    <div class="system-content">
+                        <div>
+                            <h2>Secure Access Control</h2>
+                            <p>
+                                You are viewing a protected page. Authentication state,
+                                account information and session access are managed through
+                                browser localStorage for this demonstration.
+                            </p>
+                        </div>
+
+                        <div class="system-chip">
+                            <span class="status-dot"></span>
+                            System Operational
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="dashboard-disclaimer">
+                This project demonstrates client-side authentication using localStorage.
+                It is not suitable for production authentication or sensitive user data.
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
