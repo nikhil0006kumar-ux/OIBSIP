@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="A modern responsive To-Do application for managing pending and completed tasks.">
+
+    <meta name="theme-color" content="#111827">
+
+    <title>TaskFlow — To-Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-background"></div>
+
+    <main class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-icon" aria-hidden="true">✓</div>
+
+                <div>
+                    <p class="eyebrow">PRODUCTIVITY</p>
+                    <h1>TaskFlow</h1>
+                </div>
+            </div>
+
+            <div class="header-info">
+                <span id="totalTasks">0 tasks</span>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero-section">
+            <div>
+                <p class="hero-label">YOUR DAILY WORKSPACE</p>
+
+                <h2>
+                    Organize your day,
+                    <span>one task at a time.</span>
+                </h2>
+
+                <p class="hero-description">
+                    Capture your tasks, stay focused and keep track of everything
+                    you need to accomplish.
+                </p>
+            </div>
+        </section>
+
+        <!-- Add Task -->
+        <section class="task-input-card" aria-label="Add a new task">
+
+            <form id="taskForm" class="task-form">
+
+                <div class="input-wrapper">
+                    <label for="taskInput" class="sr-only">
+                        Enter a new task
+                    </label>
+
+                    <span class="input-icon" aria-hidden="true">＋</span>
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        name="task"
+                        maxlength="500"
+                        autocomplete="off"
+                        placeholder="What do you need to accomplish?"
+                        aria-label="New task"
+                    >
+                </div>
+
+                <button type="submit" class="add-task-btn">
+                    <span>+</span>
+                    Add Task
+                </button>
+
+            </form>
+
+            <p id="inputError" class="input-error" role="alert"></p>
+
+        </section>
+
+        <!-- Task Lists -->
+        <section class="tasks-grid">
+
+            <!-- Pending Tasks -->
+            <section class="task-section pending-section">
+
+                <div class="section-header">
+
+                    <div class="section-title-group">
+                        <div class="section-icon pending-icon" aria-hidden="true">
+                            ○
+                        </div>
+
+                        <div>
+                            <h3>Pending Tasks</h3>
+                            <p id="pendingCount">0 pending</p>
+                        </div>
+                    </div>
+
+                    <span class="status-badge pending-badge">
+                        ACTIVE
+                    </span>
+
+                </div>
+
+                <div
+                    id="pendingTasks"
+                    class="task-list"
+                    aria-live="polite"
+                ></div>
+
+                <div id="pendingEmpty" class="empty-state">
+                    <div class="empty-icon">✓</div>
+
+                    <h4>No pending tasks</h4>
+
+                    <p>
+                        You're all caught up! 🎉
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Completed Tasks -->
+            <section class="task-section completed-section">
+
+                <div class="section-header">
+
+                    <div class="section-title-group">
+                        <div class="section-icon completed-icon" aria-hidden="true">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>Completed Tasks</h3>
+                            <p id="completedCount">0 completed</p>
+                        </div>
+                    </div>
+
+                    <span class="status-badge completed-badge">
+                        DONE
+                    </span>
+
+                </div>
+
+                <div
+                    id="completedTasks"
+                    class="task-list"
+                    aria-live="polite"
+                ></div>
+
+                <div id="completedEmpty" class="empty-state">
+                    <div class="empty-icon">○</div>
+
+                    <h4>No completed tasks yet</h4>
+
+                    <p>
+                        Complete a task to see it here.
+                    </p>
+                </div>
+
+            </section>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>
+                Built with HTML5, CSS3 & Vanilla JavaScript
+            </p>
+
+            <span>TaskFlow</span>
+        </footer>
+
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
