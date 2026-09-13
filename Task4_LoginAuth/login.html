@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to Secure Access">
+    <title>Login | Secure Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+    <div class="background">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
+
+    <main class="auth-page">
+        <section class="auth-card">
+            <div class="auth-header">
+                <a href="index.html" class="brand">
+                    <div class="brand-mark">SA</div>
+                    <span>Secure Access</span>
+                </a>
+
+                <span class="eyebrow">WELCOME BACK</span>
+                <h1>Sign in securely.</h1>
+                <p>Enter your account credentials to continue to your dashboard.</p>
+            </div>
+
+            <div id="loginMessage" class="message" role="alert" aria-live="polite"></div>
+
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="loginIdentifier">Username or Email</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">@</span>
+                        <input
+                            type="text"
+                            id="loginIdentifier"
+                            name="identifier"
+                            placeholder="Username or email"
+                            autocomplete="username"
+                            maxlength="100"
+                            aria-describedby="loginIdentifierError"
+                        >
+                    </div>
+                    <small id="loginIdentifierError" class="field-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">●</span>
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            aria-describedby="loginPasswordError"
+                        >
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="loginPassword"
+                            aria-label="Show password"
+                        >Show</button>
+                    </div>
+                    <small id="loginPasswordError" class="field-error"></small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full" id="loginButton">
+                    <span class="button-text">Sign In</span>
+                    <span class="button-loader"></span>
+                </button>
+            </form>
+
+            <div class="auth-switch">
+                <span>Don't have an account?</span>
+                <a href="register.html">Create account</a>
+            </div>
+
+            <div class="security-indicator">
+                <span class="status-dot"></span>
+                Authentication system ready
+            </div>
+
+            <div class="demo-note">
+                Client-side authentication demonstration only.
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
