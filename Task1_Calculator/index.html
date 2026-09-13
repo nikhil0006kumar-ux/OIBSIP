@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Professional responsive calculator built with HTML, CSS and Vanilla JavaScript">
+    <title>Task 1 | Responsive Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="calculator-wrapper">
+
+        <section class="calculator" aria-label="Calculator">
+
+            <header class="calculator-header">
+                <div>
+                    <p class="task-label">INTERNSHIP TASK 01</p>
+                    <h1>Calculator</h1>
+                </div>
+
+                <span class="status-dot" aria-label="Calculator ready"></span>
+            </header>
+
+            <div class="display-container">
+                <div
+                    class="expression-display"
+                    id="expressionDisplay"
+                    aria-live="polite">
+                </div>
+
+                <div
+                    class="result-display"
+                    id="resultDisplay"
+                    aria-live="assertive">
+                    0
+                </div>
+            </div>
+
+            <div class="button-grid">
+
+                <button class="btn control clear" data-action="clear">
+                    C
+                </button>
+
+                <button
+                    class="btn control backspace"
+                    data-action="delete"
+                    aria-label="Delete last character">
+                    ⌫
+                </button>
+
+                <button
+                    class="btn operator"
+                    data-operator="/"
+                    aria-label="Division">
+                    ÷
+                </button>
+
+                <button class="btn operator" data-operator="*">
+                    ×
+                </button>
+
+
+                <button class="btn number" data-number="7">7</button>
+                <button class="btn number" data-number="8">8</button>
+                <button class="btn number" data-number="9">9</button>
+
+                <button class="btn operator" data-operator="-">
+                    −
+                </button>
+
+
+                <button class="btn number" data-number="4">4</button>
+                <button class="btn number" data-number="5">5</button>
+                <button class="btn number" data-number="6">6</button>
+
+                <button class="btn operator" data-operator="+">
+                    +
+                </button>
+
+
+                <button class="btn number" data-number="1">1</button>
+                <button class="btn number" data-number="2">2</button>
+                <button class="btn number" data-number="3">3</button>
+
+                <button
+                    class="btn equals"
+                    data-action="calculate"
+                    aria-label="Calculate result">
+                    =
+                </button>
+
+
+                <button class="btn number zero" data-number="0">
+                    0
+                </button>
+
+                <button class="btn decimal" data-action="decimal">
+                    .
+                </button>
+
+            </div>
+
+            <footer class="calculator-footer">
+                <span>Vanilla JavaScript</span>
+                <span>•</span>
+                <span>No Eval</span>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
